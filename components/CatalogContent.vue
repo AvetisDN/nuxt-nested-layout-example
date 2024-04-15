@@ -1,0 +1,22 @@
+<template>
+  <div class="grow flex flex-col gap-8 items-center justify-center">
+    <div class="flex items-center gap-4 text-2xl">
+      <span>Page params:</span>
+      <span class="bg-zinc-800 p-4 rounded-lg" v-if="route.params.slug">{{
+        route.params.slug
+      }}</span>
+      <span class="bg-zinc-800 p-4 rounded-lg" v-if="route.params.filter">{{
+        route.params.slug
+      }}</span>
+      <span class="bg-zinc-800 p-4 rounded-lg" v-if="route.params.page">{{
+        route.params.page
+      }}</span>
+    </div>
+  </div>
+</template>
+
+<script lang="ts" setup>
+const route = useRoute();
+</script>
+
+<style></style>
