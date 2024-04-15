@@ -11,7 +11,17 @@
 </template>
 
 <script lang="ts" setup>
-const active = ref(false);
+const route = useRoute();
+const active = ref(route.params.filter === "some-filter");
+
+watch(
+  () => route.path,
+  () => {
+    active.value = route.params.filter === "some-filter";
+  },
+  { deep: true, immediate: true }
+);
+
 const handleFilter = () => {
   active.value = !active.value;
   if (active.value) {

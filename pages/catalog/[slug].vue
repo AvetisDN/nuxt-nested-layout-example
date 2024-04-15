@@ -6,11 +6,16 @@
         route.params.slug
       }}</span>
       <span class="bg-zinc-800 p-4 rounded-lg" v-if="route.params.filter">{{
-        route.params.slug
+        route.params.filter
       }}</span>
       <span class="bg-zinc-800 p-4 rounded-lg" v-if="route.params.page">{{
         route.params.page
       }}</span>
+    </div>
+    <div class="flex items-center gap-4 text-2xl">
+      <NuxtLink to="/product/some-product" class="btn btn-sm">
+        На страницу товара
+      </NuxtLink>
     </div>
   </div>
 </template>

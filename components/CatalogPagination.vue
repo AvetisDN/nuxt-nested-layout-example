@@ -43,7 +43,7 @@ const getPageRoute = (page: Number) => {
 
   pathPattern = pathPattern.replace(":slug", slug);
   if (filter) pathPattern = pathPattern.replace(":filter", filter);
-  pathPattern = pathPattern.replace(":page?", page);
+  pathPattern = pathPattern.replace(":page?", page === 1 ? "" : `${page}`);
   return pathPattern;
 };
 </script>
