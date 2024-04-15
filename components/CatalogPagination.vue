@@ -32,7 +32,7 @@
 <script lang="ts" setup>
 const route = useRoute();
 
-const getPageRoute = (page) => {
+const getPageRoute = (page: Number) => {
   let pathPattern = route.matched[0].path;
   const slug = Array.isArray(route.params.slug)
     ? route.params.slug[0]
